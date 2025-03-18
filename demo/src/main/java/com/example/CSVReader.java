@@ -20,11 +20,11 @@ public class CSVReader {
                 String classification = data[4];
                 double height = Double.parseDouble(data[5]);
                 double weight = Double.parseDouble(data[6]);
-                String abilities = data[7];
+                String ability = data[7];
                 int generation = Integer.parseInt(data[8]);
                 boolean isLegendary = Boolean.parseBoolean(data[9]);
 
-                Pokemon pokemon = new Pokemon(name, number, type1, type2, classification, height, weight, abilities, generation, isLegendary);
+                Pokemon pokemon = new Pokemon(name, number, type1, type2, classification, height, weight, ability, generation, isLegendary);
                 pokemonMap.put(name, pokemon);
             }
         }

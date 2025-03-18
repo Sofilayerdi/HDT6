@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -5,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String filePath = "Pokemon.csv"; 
+        String filePath = "data.csv"; 
 
         Map<String, Pokemon> pokemonMap;
         try {
@@ -15,7 +16,7 @@ public class Main {
             return;
         }
 
-        System.out.println("Select Map implementation:");
+        System.out.println("Selecciona una opcion:");
         System.out.println("1. HashMap");
         System.out.println("2. TreeMap");
         System.out.println("3. LinkedHashMap");
@@ -25,7 +26,7 @@ public class Main {
         Map<String, Pokemon> selectedMap = PokemonFactory.createMap(choice);
         selectedMap.putAll(pokemonMap); 
 
-        PokemonManager manager = new PokemonManager(selectedMap);
+        Manager manager = new Manager(selectedMap);
 
         while (true) {
             System.out.println("\nSelect operation:");
