@@ -12,7 +12,7 @@ public class Main {
         try {
             pokemonMap = CSVReader.readPokemonData(filePath);
         } catch (IOException e) {
-            System.out.println("Error reading CSV file: " + e.getMessage());
+            System.out.println("Error leyendo CSV: " + e.getMessage());
             return;
         }
 
@@ -29,23 +29,23 @@ public class Main {
         Manager manager = new Manager(selectedMap);
 
         while (true) {
-            System.out.println("\nSelect operation:");
-            System.out.println("1. Add Pokemon to collection");
-            System.out.println("2. Show Pokemon data");
-            System.out.println("3. Show user collection by Type1");
-            System.out.println("4. Show all Pokemon by Type1");
-            System.out.println("5. Show Pokemon by ability");
-            System.out.println("6. Exit");
+            System.out.println("\nSelecciona una funcion:");
+            System.out.println("1. Agregar Pokemon a la Coleccion");
+            System.out.println("2. Mostrar datos de pokemon");
+            System.out.println("3. Mostrar nombre por Type1");
+            System.out.println("4. Mostrar todos los Type1 de los pokemones");
+            System.out.println("5. Mostrar pokemon por habilidad");
+            System.out.println("6. Salir");
             int operation = scanner.nextInt();
             scanner.nextLine(); 
             switch (operation) {
                 case 1:
-                    System.out.println("Enter Pokemon name:");
+                    System.out.println("Ingresa el nombre del Pokemon:");
                     String name = scanner.nextLine();
                     manager.addPokemonToCollection(name);
                     break;
                 case 2:
-                    System.out.println("Enter Pokemon name:");
+                    System.out.println("Ingresa el nombre del Pokemon:");
                     name = scanner.nextLine();
                     manager.showPokemonData(name);
                     break;
@@ -56,15 +56,15 @@ public class Main {
                     manager.showAllPokemonByType1();
                     break;
                 case 5:
-                    System.out.println("Enter ability:");
+                    System.out.println("Ingresa la habilidad:");
                     String ability = scanner.nextLine();
                     manager.showPokemonByAbility(ability);
                     break;
                 case 6:
-                    System.out.println("Exiting program...");
+                    System.out.println("Saliendo...");
                     System.exit(0);
                 default:
-                    System.out.println("Invalid operation.");
+                    System.out.println("ERROR: OPCION INVALIDA.");
             }
         }
     }

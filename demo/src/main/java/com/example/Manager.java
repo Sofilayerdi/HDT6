@@ -17,12 +17,12 @@ public class Manager {
         if (pokemonMap.containsKey(name)) {
             if (!userCollection.contains(pokemonMap.get(name))) {
                 userCollection.add(pokemonMap.get(name));
-                System.out.println(name + " added to your collection.");
+                System.out.println(name + " Agregado a la coleccion.");
             } else {
-                System.out.println(name + " is already in your collection.");
+                System.out.println(name + " ya existe en la coleccion.");
             }
         } else {
-            System.out.println("Error: " + name + " not found in the dataset.");
+            System.out.println("Error: " + name + " no existe.");
         }
     }
 
@@ -30,7 +30,7 @@ public class Manager {
         if (pokemonMap.containsKey(name)) {
             System.out.println(pokemonMap.get(name));
         } else {
-            System.out.println("Error: " + name + " not found in the dataset.");
+            System.out.println("Error: " + name + " no existe.");
         }
     }
 

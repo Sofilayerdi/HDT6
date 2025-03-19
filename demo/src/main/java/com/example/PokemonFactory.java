@@ -13,7 +13,7 @@ public class PokemonFactory {
             case 3:
                 return new LinkedHashMap<>();
             default:
-                throw new IllegalArgumentException("Invalid choice");
+                throw new IllegalArgumentException("Opcion invalida.");
         }
     }
 }

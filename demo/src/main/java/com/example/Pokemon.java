@@ -66,16 +66,16 @@ public class Pokemon {
     @Override
     public String toString() {
         return "Pokemon{" +
-                "name='" + name + '\'' +
-                ", number=" + number +
-                ", type1='" + type1 + '\'' +
-                ", type2='" + type2 + '\'' +
-                ", classification='" + classification + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                ", ability='" + ability + '\'' +
-                ", generation=" + generation +
-                ", isLegendary=" + isLegendary +
+                "Nombre='" + name + '\'' +
+                ", Numero=" + number +
+                ", Type1='" + type1 + '\'' +
+                ", Type2='" + type2 + '\'' +
+                ", Clasificacion='" + classification + '\'' +
+                ", Altura=" + height +
+                ", Peso=" + weight +
+                ", Habilidad='" + ability + '\'' +
+                ", Generacion=" + generation +
+                ", Legendario=" + isLegendary +
                 '}';
     }
 }
