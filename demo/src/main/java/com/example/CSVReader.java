@@ -10,21 +10,26 @@ public class CSVReader {
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
-            br.readLine();
+            br.readLine(); 
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
-                String name = data[0];
-                int number = Integer.parseInt(data[1]);
-                String type1 = data[2];
-                String type2 = data[3];
-                String classification = data[4];
-                double height = Double.parseDouble(data[5]);
-                double weight = Double.parseDouble(data[6]);
-                String ability = data[7];
-                int generation = Integer.parseInt(data[8]);
-                boolean isLegendary = Boolean.parseBoolean(data[9]);
+                line = line.trim(); 
+                if (line.isEmpty()) {
+                    continue; 
+                }
 
-                Pokemon pokemon = new Pokemon(name, number, type1, type2, classification, height, weight, ability, generation, isLegendary);
+                String[] data = line.split(","); 
+                String name = data[0].trim();
+                int number = Integer.parseInt(data[1].trim()); 
+                String type1 = data[2].trim();
+                String type2 = data[3].trim();
+                String classification = data[4].trim();
+                double height = Double.parseDouble(data[5].trim()); 
+                double weight = Double.parseDouble(data[6].trim()); 
+                String abilities = data[7].trim();
+                int generation = Integer.parseInt(data[8].trim()); 
+                boolean isLegendary = Boolean.parseBoolean(data[9].trim());
+
+                Pokemon pokemon = new Pokemon(name, number, type1, type2, classification, height, weight, abilities, generation, isLegendary);
                 pokemonMap.put(name, pokemon);
             }
         }

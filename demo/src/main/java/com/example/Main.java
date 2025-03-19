@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        String filePath = "data.csv"; 
+        String filePath = "pokemon_data_pokeapi.csv"; 
 
         Map<String, Pokemon> pokemonMap;
         try {
